@@ -5,12 +5,12 @@
 ############################################################
 
 # Add in your name
-# Claudia
+# Clara
 # Add in purpose of this script
 # To learn about version control on github
 
-# git config --global user.email "you@example.com"
-# git config --global user.name "Your Name"
+# git config --global user.email "claragledhill@gmail.com"
+# git config --global user.name "s1425022"
 
 # Libraries ----
 library(ggplot2)
@@ -21,6 +21,7 @@ library(readr)
 # Functions ----
 # This is a ggplot function for a nice clean theme
 # HINT: use this theme when making your plot later on
+
 theme.clean <- function(){
   theme_bw()+
     theme(axis.text.x=element_text(size=12, angle=45, vjust=1, hjust=1),
@@ -39,8 +40,9 @@ theme.clean <- function(){
 }
 
 # Load data ----
-setwd("C:/Users/clauv/Desktop/Uni/Coding_club/Week_5/CC-7-Github")
-temp_elevation <- read.csv("temp_elevation.csv")
+
+temp_elevation <- read_csv("~/Documents/Year 4/CC-7-Github/temp_elevation.csv")
+
 
 # Make a plot showing how soil temperature changes with elevation ----
 (temp.el <- ggplot (temp_elevation, aes(x=Elevation.m, y=Soil.temp.mean)) +
